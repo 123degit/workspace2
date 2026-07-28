@@ -1,0 +1,4 @@
+import { NavLink, Outlet } from 'react-router-dom';
+import { useLearningStore } from '../../store/useLearningStore';
+const links=[['/today','今日学习','☀'],['/review','复习乐园','✦'],['/vocabulary','词句宝库','Aa'],['/extension','拓展学习','▣'],['/report','反馈报告','◔'],['/shop','积分商城','◇']];
+export function LearningShell(){const points=useLearningStore(s=>s.points);return <main className="app-frame"><header className="topbar"><div className="brand"><div className="brand-mark">B</div><div><b>Bobo's Fruit Shop</b><span>AI 幼儿英语启蒙 · L1</span></div></div><nav>{links.map(([to,label,icon])=><NavLink key={to} to={to} className={({isActive})=>isActive?'active':''}><i>{icon}</i>{label}</NavLink>)}</nav><div className="top-actions"><span className="points">✦ {points}</span><span className="avatar">小</span></div></header><section className="content"><Outlet/></section></main>}

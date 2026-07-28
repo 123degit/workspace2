@@ -1,0 +1,5 @@
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
+import { shopItems } from '../data/lesson';
+type State = { videoDone:boolean; reviewScore:number; spellingScore:number; matchingScore:number; speakingScore:number|null; points:number; redeemed:string[]; completeVideo:()=>void; setReviewScore:(n:number)=>void; setSpellingScore:(n:number)=>void; setMatchingScore:(n:number)=>void; setSpeakingScore:(n:number)=>void; redeem:(ids:string[])=>void };
+export const useLearningStore = create<State>()(persist((set,get)=>({videoDone:false,reviewScore:0,spellingScore:0,matchingScore:0,speakingScore:null,points:120,redeemed:[],completeVideo:()=>set({videoDone:true}),setReviewScore:n=>set({reviewScore:n}),setSpellingScore:n=>set({spellingScore:n}),setMatchingScore:n=>set({matchingScore:n}),setSpeakingScore:n=>set({speakingScore:n}),redeem:ids=>{const cost=ids.reduce((sum,id)=>sum+(shopItems.find(x=>x.id===id)?.points??0),0);if(cost<=get().points)set(s=>({points:s.points-cost,redeemed:[...new Set([...s.redeemed,...ids])]}));}}),{name:'bobo-learning-demo'}));
