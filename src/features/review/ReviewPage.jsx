@@ -4,6 +4,7 @@ import { questions } from '../../data/lesson';
 import { useLearningStore } from '../../store/useLearningStore';
 import { MediaFallback } from '../../components/ui/MediaFallback';
 import { calculateReviewScore } from './reviewLogic';
+import './review.css';
 
 export function ReviewPage() {
   const unlocked = useLearningStore((state) => state.videoDone);
