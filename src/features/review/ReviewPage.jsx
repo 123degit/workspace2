@@ -5,6 +5,7 @@ import { useLearningStore } from '../../store/useLearningStore';
 import { MediaFallback } from '../../components/ui/MediaFallback';
 import { calculateReviewScore } from './reviewLogic';
 import './review.css';
+import './review-position.css';
 
 export function ReviewPage() {
   const unlocked = useLearningStore((state) => state.videoDone);
