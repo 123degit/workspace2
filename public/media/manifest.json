@@ -1,0 +1,6 @@
+{
+  "lessonVideo": "./l1-bobos-fruit-shop.mp4",
+  "reviewAudio": ["./this-is-a-lemon.mp3", "./i-can-see-some-oranges.mp3", "./this-is-a-mango.mp3", "./this-is-a-cherry.mp3", "./this-is-a-banana.mp3", "./this-is-a-melon.mp3", "./this-isnt-a-strawberry.mp3", "./there-are-some-mangoes.mp3"],
+  "reviewCorrect": "./correct.mp3",
+  "reviewWrong": "./wrong.mp3"
+}
