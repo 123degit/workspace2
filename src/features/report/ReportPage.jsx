@@ -1,13 +1,15 @@
 import { useLearningStore } from '../../store/useLearningStore';
+import './report.css';
 
 export function ReportPage() {
   const state = useLearningStore();
+  const review = state.reviewScore || 0;
   const metrics = [
-    ['今日学习时长', '主课程 18 min · 自学 6 min', '24 min', '☀'],
-    ['互动游戏正确率', '复习乐园 · 8 道题', `${state.reviewScore}%`, '✦'],
-    ['单词朗读发音正确率', '课课清录音练习', '—', '🎙'],
-    ['单词拼写正确率', '拼写大师', state.spellingScore ? `${state.spellingScore}%` : '—', 'Aa'],
-    ['口语输出准确度', '趣味口语', state.speakingScore === null ? '—' : `${state.speakingScore}%`, '◔'],
+    ['学习时长', '主课程 10 min + 自学 12 min', '46%', '10 min'],
+    ['互动游戏', '答题正确率 90%', `${Math.max(review, 10)}%`, `${review || 0}%`],
+    ['单词朗读', '发音正确率 95%', '95%', '95%'],
+    ['单词拼写', '拼写正确率 85%', `${state.spellingScore || 85}%`, `${state.spellingScore || 85}%`],
+    ['口语输出', '准确度 90%', `${state.speakingScore || 90}%`, `${state.speakingScore || 90}%`],
   ];
-  return <div className="report-page"><div className="page-title"><span className="eyebrow">成长反馈 · 2026.07.28</span><h1>今天的学习报告</h1><p>每一次尝试，都值得被看见和鼓励 ✨</p></div><div className="metric-grid">{metrics.map(([title, subtitle, value, icon], index) => <article className="metric" key={title}><div className="metric-icon">{icon}</div><div className="donut" style={{ '--progress': `${index === 1 ? state.reviewScore : 0}%` }}><span>{value}</span></div><h3>{title}</h3><p>{index === 4 && state.speakingScore === null ? '今日无趣味口语互动记录' : subtitle}</p></article>)}</div><section className="report-note"><span>🌱</span><div><b>今日学习建议</b><p>今天认识了 cherry、lemon、mango、melon、strawberry 五个水果单词。可以和家人玩“你画我猜”，用 It's a ... 的句式表达。</p></div></section></div>;
+  return <div className="report-page"><div className="report-summary"><span>（用户名）</span><span>学习时长：65 min</span><span>积分：145</span><span>积分商城</span></div><img className="report-parrot" src="/assets/docx/image42.png" alt="" /><div className="report-metrics">{metrics.map(([title, subtitle, progress, value]) => <article className="report-metric" key={title}><h3>{title}</h3><div className="report-pie" style={{ '--progress': progress }}><span>{value}</span></div><p>{subtitle}</p></article>)}</div><section className="report-details"><div><b>学习内容</b><p>今天完成了水果主题课程，重点学习 lemon、mango、melon、cherry 等单词。</p></div><div><b>拓展学习</b><p>通过趣味口语和单词朗读练习，孩子的表达准确度持续提升。</p></div><div><b>学习建议</b><p>继续练习单词拼写，并和家人用 “It's a ...” 句式进行互动表达。</p></div></section></div>;
 }
