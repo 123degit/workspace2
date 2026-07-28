@@ -6,7 +6,7 @@
 
 ## 架构
 
-- React + TypeScript + Vite，严格模式。
+- React + JavaScript + Vite。
 - React Router 负责六大模块和游戏子页面路由。
 - Zustand 负责课程进度、解锁、积分兑换、答题结果等跨页状态；本地存储用于刷新后保留 Demo 状态。
 - 领域数据集中在 `src/data`，媒体路径集中在 `src/assets`/`public/assets`，页面只消费类型化数据。

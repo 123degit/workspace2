@@ -6,7 +6,7 @@
 
 **Architecture:** Vite React TypeScript app with a shared 16:9 shell, route-level feature pages, typed domain data, and Zustand persistence for learning progress and points.
 
-**Tech Stack:** React 18, TypeScript, Vite, React Router, Zustand, Vitest, Testing Library.
+**Tech Stack:** React, JavaScript, Vite, React Router, Zustand, Vitest, Testing Library.
 
 ## Global Constraints
 
@@ -17,7 +17,7 @@
 
 ### Task 1: Scaffold and asset extraction
 
-**Files:** `package.json`, `index.html`, `src/main.tsx`, `src/styles.css`, `public/assets/*`, `public/media/README.md`, `vite.config.ts`, `tsconfig*.json`.
+**Files:** `package.json`, `index.html`, `src/main.jsx`, `src/styles.css`, `public/assets/*`, `public/media/README.md`, `vite.config.js`.
 
 - Initialize Vite React TypeScript dependencies and scripts.
 - Extract DOCX embedded media into `public/assets/docx` with a repeatable script/command note.
@@ -26,7 +26,7 @@
 
 ### Task 2: Domain data and app state
 
-**Files:** `src/types/domain.ts`, `src/data/lesson.ts`, `src/store/useLearningStore.ts`, `src/store/useLearningStore.test.ts`.
+**Files:** `src/data/lesson.js`, `src/store/useLearningStore.js`, `src/store/useLearningStore.test.js`.
 
 - Define typed lesson, vocabulary, game question, report, and shop item contracts.
 - Add L1 fruit data for five target words and eight review questions.
@@ -35,7 +35,7 @@
 
 ### Task 3: Shared shell and routing
 
-**Files:** `src/app/App.tsx`, `src/app/routes.tsx`, `src/components/layout/LearningShell.tsx`, `src/components/ui/MediaFallback.tsx`.
+**Files:** `src/app/App.jsx`, `src/components/layout/LearningShell.jsx`, `src/components/ui/MediaFallback.jsx`.
 
 - Add navigation for six modules and nested feature routes.
 - Add 16:9 shell, progress badge, points badge, and missing-media fallback.

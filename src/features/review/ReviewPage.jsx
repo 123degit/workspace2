@@ -5,14 +5,12 @@ import { useLearningStore } from '../../store/useLearningStore';
 import { MediaFallback } from '../../components/ui/MediaFallback';
 import { calculateReviewScore } from './reviewLogic';
 
-type Choice = 'yes' | 'no';
-
 export function ReviewPage() {
   const unlocked = useLearningStore((state) => state.videoDone);
   const setScore = useLearningStore((state) => state.setReviewScore);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
-  const [choice, setChoice] = useState<Choice | null>(null);
+  const [choice, setChoice] = useState(null);
   const [finished, setFinished] = useState(false);
 
   if (!unlocked) {
@@ -25,7 +23,7 @@ export function ReviewPage() {
   }
 
   const question = questions[questionIndex];
-  const answer = (value: Choice) => {
+  const answer = (value) => {
     if (choice) return;
     setChoice(value);
     if (value === question.answer) setCorrectCount((count) => count + 1);
