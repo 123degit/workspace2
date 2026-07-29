@@ -6,7 +6,14 @@ export const words = [
  {word:'strawberry',phonetic:'/ˈstrɔːberi/',meaning:'草莓',spelling:['s','tr','aw','b','e','rr','y'],image:'/assets/docx/image5.png',sentence:'This strawberry is so red.'},
 ];
 export const questions = [
- {sentence:'This is a lemon.',image:words[1].image,answer:'yes'}, {sentence:'I can see some oranges.',image:words[2].image,answer:'no'}, {sentence:'This is a mango.',image:words[2].image,answer:'yes'}, {sentence:'This is a cherry.',image:words[0].image,answer:'no'}, {sentence:'This is a banana.',image:words[1].image,answer:'no'}, {sentence:'This is a melon.',image:words[3].image,answer:'yes'}, {sentence:"This isn't a strawberry.",image:words[4].image,answer:'no'}, {sentence:'There are some mangoes.',image:words[2].image,answer:'yes'},
+ {sentence:'This is a lemon.',image:'/assets/docx/review-lemon.png',answer:'yes',audio:'/music/This is a lemon..mp3'},
+ {sentence:'I can see some oranges.',image:'/assets/docx/review-cherries.png',answer:'no',audio:'/music/I can see some oranges..mp3'},
+ {sentence:'This is a mango.',image:'/assets/docx/review-mango.png',answer:'yes',audio:'/music/This is a mango..mp3'},
+ {sentence:'This is a cherry.',image:'/assets/docx/review-watermelon.png',answer:'no',audio:'/music/This is a cherry..mp3'},
+ {sentence:'This is a banana.',image:'/assets/docx/review-cantaloupe.png',answer:'no',audio:'/music/This is a banana..mp3'},
+ {sentence:'This is a melon.',image:'/assets/docx/review-melon.png',answer:'yes',audio:'/music/This is a melon..mp3'},
+ {sentence:"This isn't a strawberry.",image:'/assets/docx/review-strawberry.png',answer:'no',audio:"/music/This isn't a strawberry..mp3"},
+ {sentence:'There are some mangoes.',image:'/assets/docx/review-mangoes.png',answer:'yes',audio:'/music/There are some mangoes..mp3'},
 ];
 export const shopItems = [
  {id:'song-lamb',title:'Mary Had a Little Lamb',category:'儿歌',points:30,media:'lamb.mp4'}, {id:'phonetic-i',title:'/ɪ/ 音标发音',category:'音标发音',points:20,media:'phonetic-i.mp4'}, {id:'letter-a',title:'Aa 字母启蒙',category:'字母',points:25,media:'a.mp4'}, {id:'beach',title:'At the Beach',category:'动画',points:40,media:'beach.mp4'},
