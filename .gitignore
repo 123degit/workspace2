@@ -2,5 +2,8 @@ node_modules/
 .pnpm-store/
 dist/
 .vite/
+.superpowers/
 *.tsbuildinfo
 .vite-dev*.log
+vite-dev*.log
+companion*.log
