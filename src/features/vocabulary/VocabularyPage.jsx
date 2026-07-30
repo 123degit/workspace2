@@ -35,5 +35,7 @@ function MatchGame() {
 export function VocabularyPage() {
   const [tab, setTab] = useState('overview'); const [reviewMode, setReviewMode] = useState(false);
   const changeMode = (value) => { setReviewMode(value); setTab(value ? 'review' : 'overview'); };
-  return <div className="vocab-page"><div className="vocab-head"><div><span className="eyebrow">词句宝库</span><h1>{tabs.find((item) => item.id === tab)?.label}</h1></div><div className="subnav">{tabs.map((item) => <button className={tab === item.id ? 'active' : ''} onClick={() => setTab(item.id)} key={item.id}>{item.label}</button>)}</div></div>{tab === 'spelling' ? <SpellingGame /> : tab === 'match' ? <MatchGame /> : <VocabularyOverview reviewMode={tab === 'review' || reviewMode} onModeChange={changeMode} onChallenge={() => setTab('match')} />}</div>;
+  const isCourseOverview = tab === 'overview';
+  const isMobileGame = tab === 'spelling' || tab === 'review';
+  return <div className={`vocab-page${isCourseOverview ? ' vocab-page--lesson-mobile' : ''}${isMobileGame ? ' vocab-page--mobile-game' : ''}`}><div className="vocab-head"><div><span className="eyebrow">词句宝库</span><h1>{tabs.find((item) => item.id === tab)?.label}</h1></div><div className="subnav">{tabs.map((item) => <button className={tab === item.id ? 'active' : ''} onClick={() => setTab(item.id)} key={item.id}>{item.label}</button>)}</div></div>{tab === 'spelling' ? <SpellingGame /> : tab === 'match' ? <MatchGame /> : <VocabularyOverview reviewMode={tab === 'review' || reviewMode} onModeChange={changeMode} onChallenge={() => setTab('match')} />}</div>;
 }
