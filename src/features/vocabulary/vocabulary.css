@@ -11,6 +11,7 @@
 .spelling-visual .leaf-board span,.letter-tray button{background-image:url('/assets/docx/image37.png');background-size:contain;background-position:center;background-repeat:no-repeat}
 .letter-tray::after{content:'';display:block;width:122px;height:70px;flex:0 0 122px;background:url('/assets/docx/image37.png') center/contain no-repeat}
 .spelling-visual .leaf-board{top:150px}
+.spelling-visual button.game-word-image{border:0;padding:0;cursor:pointer}
 .spelling-visual .leaf-board span,.letter-tray button{background-image:url('/assets/docx/image36.png')}
 .spelling-visual .leaf-board::before{content:'·';display:grid;place-items:center;width:120px;height:70px;background:url('/assets/docx/image36.png') center/contain no-repeat;color:#123d37;font-size:28px;grid-column:3;grid-row:2}
 .letter-tray button{background-image:url('/assets/docx/image37.png')}
