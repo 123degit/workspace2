@@ -1,8 +1,18 @@
 // @vitest-environment jsdom
-import { cleanup, render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { afterEach, describe, expect, it } from 'vitest';
 import { TodayPage } from './TodayPage';
+
+describe('course preparation', () => {
+  it('opens the review garden from the course preparation button', () => {
+    const { container } = render(<MemoryRouter initialEntries={['/today']}><Routes><Route path="/today" element={<TodayPage />} /><Route path="/review" element={<p>review garden</p>} /></Routes></MemoryRouter>);
+
+    fireEvent.click(container.querySelector('.primary'));
+
+    expect(screen.getByText('review garden')).toBeTruthy();
+  });
+});
 
 afterEach(cleanup);
 
