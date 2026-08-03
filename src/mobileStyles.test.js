@@ -47,11 +47,17 @@ describe('Android mobile style contracts', () => {
 
   it('defines compact phone layouts for spelling and rolling review', () => {
     const vocabularyStyles = readStyle('./features/vocabulary/vocabulary.css');
+    const sharedStyles = readStyle('./styles.css');
 
     expect(vocabularyStyles).toContain('@media (max-width:480px){.vocab-page:not(.vocab-page--lesson-mobile)');
-    expect(vocabularyStyles).toContain('.vocab-page--mobile-game .spelling-game .game-word-image{position:static;width:100%;height:150px;background:transparent;border:0;box-shadow:none');
-    expect(vocabularyStyles).toContain('.vocab-page--mobile-game .spelling-visual .leaf-board{position:static;grid-template-columns:repeat(2,minmax(0,1fr))');
     expect(vocabularyStyles).toContain('.vocab-page--mobile-game .rolling-grid{grid-template-columns:repeat(4,minmax(0,1fr))');
-    expect(vocabularyStyles).toContain('body .vocab-page--mobile-game .letter-tray span{background-image:url(\'/assets/docx/image37.png\')');
+    expect(vocabularyStyles).toContain('.vocab-page--mobile-game .spelling-visual{position:relative;display:block;height:100%;min-height:0;margin:0}');
+    expect(vocabularyStyles).toContain('.vocab-page--mobile-game .spelling-visual .game-word-image{position:absolute;right:clamp(10px,3vw,18px);top:clamp(10px,3vw,18px)');
+    expect(vocabularyStyles).toContain('.vocab-page--mobile-game .spelling-visual .leaf-board{position:absolute;left:clamp(12px,5vw,46px);right:clamp(104px,31vw,300px);top:clamp(44px,11dvh,58px)');
+    expect(vocabularyStyles).toContain('.vocab-page--mobile-game .letter-tray{position:absolute;left:clamp(12px,5vw,24px);right:clamp(12px,5vw,24px);bottom:clamp(14px,4dvh,28px)');
+    expect(vocabularyStyles).toContain('.vocab-page--mobile-game .spelling-visual .leaf-board button{width:clamp(56px,25vw,120px);height:clamp(38px,9dvh,70px)');
+    expect(vocabularyStyles).not.toContain('.vocab-page--mobile-game .spelling-game .game-word-image{position:static');
+    expect(sharedStyles).toContain('.app-frame:has(.vocab-page--mobile-game){height:100dvh;overflow:hidden;display:flex;flex-direction:column}');
+    expect(sharedStyles).toContain('.content:has(.vocab-page--mobile-game){display:flex;flex:1;min-height:0;overflow:hidden');
   });
 });

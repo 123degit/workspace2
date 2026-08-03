@@ -2,8 +2,8 @@ import { expect, it } from 'vitest';
 import { getReviewFeedbackAudio, playReviewAudio } from './reviewAudio';
 
 it('uses the supplied correct and incorrect feedback sounds', () => {
-  expect(getReviewFeedbackAudio('correct')).toBe('/music/激光.mp3');
-  expect(getReviewFeedbackAudio('wrong')).toBe('/music/啊哦.mp3');
+  expect(getReviewFeedbackAudio('correct')).toBe('/music/胜利 (1).mp3');
+  expect(getReviewFeedbackAudio('wrong')).toBe('/music/失败 (1).mp3');
 });
 
 it('returns false when no audio source is available', async () => {

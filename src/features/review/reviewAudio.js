@@ -11,5 +11,5 @@ export async function playReviewAudio(src, audioFactory = (source) => new Audio(
 }
 
 export function getReviewFeedbackAudio(result) {
-  return result === 'correct' ? '/music/激光.mp3' : '/music/啊哦.mp3';
+  return result === 'correct' ? '/music/胜利 (1).mp3' : '/music/失败 (1).mp3';
 }

@@ -2,8 +2,6 @@ import { useState } from 'react';
 import './extension.css';
 
 const courses = [
-  { title: '趣味口语', progress: '1/2', tone: 'cyan', image: '/assets/docx/image40-transparent.png', bubble: 'hello' },
-  { title: '音标发音', progress: '1/2', tone: 'blue', image: '/assets/docx/image41-transparent.png', bubble: '/æ/' },
   { title: '儿歌', progress: '30/30', tone: 'yellow', image: '/assets/docx/image42-transparent.png' },
   { title: '字母', progress: '26/26', tone: 'pink', image: '/assets/docx/image43-transparent.png' },
   { title: '绘本', progress: '10/12', tone: 'orange', image: '/assets/docx/image44-transparent.png' },

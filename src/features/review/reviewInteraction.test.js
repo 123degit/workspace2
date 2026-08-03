@@ -17,6 +17,6 @@ it('does not render the redundant bottom replay controls', () => {
 it('resets the wrong-answer feedback before replaying the current question', () => {
   const page = readFileSync(new URL('./ReviewPage.jsx', import.meta.url), 'utf8');
 
-  expect(page).toContain("const retryQuestion = () => { setSelectedAnswer(null); setAnswerResult(null); setStage('question'); };");
+  expect(page).toContain('const retryQuestion = () => setResult(null);');
   expect(page).toContain('onClick={retryQuestion}');
 });

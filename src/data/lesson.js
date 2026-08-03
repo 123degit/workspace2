@@ -1,9 +1,9 @@
 export const words = [
- {word:'cherry',phonetic:'/ˈtʃeri/',meaning:'樱桃',spelling:['ch','e','rr','y'],image:'/assets/docx/image28.png',audio:'/music/cherry拼读音频.mp3',sentence:'This is my cherry.'},
- {word:'lemon',phonetic:'/ˈlemən/',meaning:'柠檬',spelling:['l','e','m','o','n'],image:'/assets/docx/image27.png',audio:'/music/lemon拼读音频.mp3',sentence:"I don't like lemons."},
- {word:'mango',phonetic:'/ˈmæŋɡəʊ/',meaning:'芒果',spelling:['m','a','n','g','o'],image:'/assets/docx/image29.png',audio:'/music/mango拼读音频.mp3',sentence:'The mango is yellow.'},
- {word:'melon',phonetic:'/ˈmelən/',meaning:'瓜；甜瓜',spelling:['m','e','l','o','n'],image:'/assets/docx/image31.png',audio:'/music/melon拼读音频.mp3',sentence:'There is a melon.'},
- {word:'strawberry',phonetic:'/ˈstrɔːberi/',meaning:'草莓',spelling:['s','tr','aw','b','e','rr','y'],image:'/assets/docx/image33.png',audio:'/music/strawberry拼读音频.mp3',sentence:'This strawberry is so red.'},
+ {word:'red',phonetic:'/red/',meaning:'红色的；红色',spelling:['r','e','d'],image:'/assets/docx/red.png',audio:'/music/red拼读音频.mp3',sentence:'I like red.'},
+ {word:'blue',phonetic:'/bluː/',meaning:'蓝色的；蓝色',spelling:['b','l','ue'],image:'/assets/docx/blue.png',audio:'/music/blue拼读音频.mp3',sentence:'I like blue.'},
+ {word:'yellow',phonetic:'/ˈjel.oʊ/',meaning:'黄色的；黄色',spelling:['y','e','ll','ow'],image:'/assets/docx/yellow.png',audio:'/music/yellow拼读音频.mp3',sentence:'I like yellow.'},
+ {word:'green',phonetic:'/ɡriːn/',meaning:'绿色的；绿色',spelling:['g','r','ee','n'],image:'/assets/docx/green.png',audio:'/music/green拼读音频.mp3',sentence:'I like green.'},
+ {word:'black',phonetic:'/blæk/',meaning:'黑色的；黑色',spelling:['b','l','a','ck'],image:'/assets/docx/black.png',audio:'/music/black拼读音频.mp3',sentence:'I like black.'},
 ];
 export const lessonWords = words;
 export const questions = [
