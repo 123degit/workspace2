@@ -17,3 +17,4 @@
 @keyframes color-pop { from { opacity: 0; transform: scale(.65); } to { opacity: 1; transform: scale(1); } }
 @keyframes ribbons { to { transform: translateY(60px); } }
 @media (max-width: 800px) { .color-review { padding: 16px; } .color-review__game { min-height: 620px; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 240px; gap: 8px; } .color-board { grid-column: span 2; padding: 70px 50px 60px; } .color-board__card { top: 40%; left: 54%; width: 60%; } .flag-choice { height: 240px; } .flag-choice span { top: 36px; left: 64%; font-size: 40px; } }
+.color-review,.color-summary{background-image:url('/assets/docx/screenshot-20260723-122603.webp')}
