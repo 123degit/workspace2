@@ -10,5 +10,5 @@ const courses = [
 
 export function ExtensionPage() {
   const [selected, setSelected] = useState(null);
-  return <div className="extension-page"><div className="extension-stats"><span>（用户名）</span><span>学习时长：55 min</span><span>积分：130</span><span>积分商城</span></div><div className="extension-grid">{courses.map((course) => <button key={course.title} className={`extension-card ${course.tone} ${selected === course.title ? 'selected' : ''}`} onClick={() => setSelected(course.title)}><img src={course.image} alt="" /><strong>{course.title}</strong><small>已完成：{course.progress}</small></button>)}</div>{selected && <div className="extension-toast">已选择「{selected}」，准备开始学习</div>}</div>;
+  return <div className="extension-page extension-page--storybook"><div className="extension-stats"><span>（用户名）</span><span>学习时长：55 min</span><span>积分：130</span><span>积分商城</span></div><div className="extension-grid">{courses.map((course) => <button key={course.title} className={`extension-card extension-story-card ${course.tone} ${selected === course.title ? 'selected' : ''}`} onClick={() => setSelected(course.title)}><img src={course.image} alt="" /><strong>{course.title}</strong><small>已完成：{course.progress}</small></button>)}</div>{selected && <div className="extension-toast">已选择「{selected}」，准备开始学习</div>}</div>;
 }
